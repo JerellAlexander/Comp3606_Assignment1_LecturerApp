@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Network Information Section (15% of height) -->
+    <LinearLayout
+        android:id="@+id/networkInfoSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvNetworkInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network SSID: MyWiFiDirectNetwork\nPassword: 12345678"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnEndClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Class"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Attendees List Section (35% of height) -->
+    <LinearLayout
+        android:id="@+id/attendeesListSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendees:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginBottom="8dp"/>
+
+        <ListView
+            android:id="@+id/listViewAttendees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp"
+            android:background="#DDDDDD"/>
+    </LinearLayout>
+
+    <!-- Chat Interface Section (50% of height) -->
+    <LinearLayout
+        android:id="@+id/chatInterfaceSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.50"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="8dp">
+
+            <ScrollView
+                android:id="@+id/scrollViewChat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvChatMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat messages will appear here..."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:lineSpacingExtra="4dp"/>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etChatMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:hint="Type a message..."
+                    android:inputType="text"/>
+
+                <Button
+                    android:id="@+id/btnSendMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
